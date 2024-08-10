@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="icon" href="img/10921081.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="img/10292284.png" alt="Website Icon" class="header-icon"> 
+        <h1>Quiz</h1>
+    </header>
+
+    <main id="home" class="quiz-box">
+        <h2>Select Topic and Difficulty</h2>
+        <label for="topic">Topic:</label>
+        <select id="topic" aria-label="Select Quiz Topic">
+            <option value="squares">Squares</option>
+            <option value="cubes">Cubes</option>
+            <option value="multiplication">Multiplication Table</option>
+            <option value="fraction-percentage">Fraction-Percentage</option>
+        </select>
+
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" aria-label="Select Difficulty Level">
+            <option value="easy">Easy</option>
+            <option value="moderate">Moderate</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <button id="startQuiz" aria-label="Start the Quiz">Start Quiz</button>
+    </main>
+
+    <section id="quiz" class="quiz-box" style="display: none;">
+        <div id="questionHeader">
+            <h2 id="quizTopic"></h2>
+            <p id="quizDifficulty"></p>
+        </div>
+        <div id="timer">Time: <span id="timeLeft"></span>s</div>
+        <p id="questionText"></p>
+        <div id="options" class="left-align">
+            <button class="option-btn" onclick="selectOption(0)" aria-label="Option 1"></button>
+            <button class="option-btn" onclick="selectOption(1)" aria-label="Option 2"></button>
+            <button class="option-btn" onclick="selectOption(2)" aria-label="Option 3"></button>
+            <button class="option-btn" onclick="selectOption(3)" aria-label="Option 4"></button>
+        </div>
+        <button id="nextBtn" onclick="nextQuestion()" style="display: none;" aria-label="Next Question">Next</button>
+        <button id="homeBtn" onclick="goHome()" aria-label="Return to Home">Home</button>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Quiz. All rights reserved.</p>
+    </footer>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

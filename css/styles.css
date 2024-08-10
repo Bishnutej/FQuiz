@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('../img/10740576.jpg') no-repeat center center fixed; /* Replace with your image path */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8); /* Added transparency */
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px; /* Increased font size */
+    display: inline-block;
+}
+
+/* Main Quiz Box Styles */
+.quiz-box {
+    background-color: rgba(252, 239, 239, 0.9); /* Slight transparency */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly increased shadow */
+    text-align: center;
+    width: 100%;
+    max-width: 550px; /* Increased max width */
+    margin-top: 120px; /* Adjusted to account for header */
+    margin-bottom: 120px; /* Adjusted to account for footer */
+}
+
+.left-align {
+    text-align: left;
+}
+
+#options {
+    margin-top: 25px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin: 7px 0; /* Increased margin */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+    text-align: left;
+    font-size: 16px; /* Increased font size */
+}
+
+.option-btn:hover {
+    background-color: #ddd;
+    transform: scale(1.02); /* Slightly enlarges the button on hover */
+}
+
+#timer {
+    margin: 20px 0;
+    font-size: 18px; /* Increased font size */
+}
+
+#nextBtn, #homeBtn {
+    margin-top: 25px; /* Increased margin-top */
+    padding: 12px 25px; /* Increased padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+#nextBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#nextBtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+#homeBtn {
+    background-color: #2196F3;
+    color: white;
+}
+
+#homeBtn:hover {
+    background-color: #1e87d6;
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8); /* Added transparency */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .quiz-box {
+        padding: 20px;
+        margin-top: 140px; /* Additional spacing for mobile header overlap */
+        margin-bottom: 80px; /* Additional spacing for mobile footer overlap */
+    }
+    
+    #nextBtn, #homeBtn {
+        padding: 10px 20px;
+        font-size: 14px; /* Adjusted for smaller screens */
+    }
+}
